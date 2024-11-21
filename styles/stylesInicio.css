@@ -1,0 +1,249 @@
+ /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0A192F; /* Fondo oscuro principal */
+    color: #D4DEFE; /* Texto claro */
+}
+
+/* General Wrapper Styles */
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-content {
+    display: flex; /* Usamos Flexbox para alinear el contenido */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espaciado entre el texto y la imagen */
+    max-width: 1200px;
+    width: 100%;
+    color: #D4DEFE;
+}
+
+.text-content {
+    flex: 1; /* El texto ocupa más espacio */
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.text-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #8892B0;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #A8B2D1;
+}
+
+.text-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #3C998F;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #3C998F;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.text-content a:hover {
+    background: #3C998F;
+    color: #0A192F;
+}
+
+/* Styles for the Image */
+.image-content {
+    flex: 0 0 250px; /* La imagen tendrá un tamaño fijo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    width: 100%; /* La imagen ocupa todo el contenedor */
+    max-width: 250px; /* Tamaño máximo */
+    border-radius: 40%; /* Bordes suavizados */
+    /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); Sombra */
+    object-fit: cover; /* Ajusta la imagen para que encaje en su contenedor */
+    transition: transform 0.3s ease;
+}
+
+
+.image-content img:hover {
+    transform: translateY(-5%) rotate(-2deg) scale(1.05); /* Efecto de hover con zoom */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .image-content {
+        margin-top: 20px; /* Espaciado entre texto e imagen */
+    }
+}
+
+
+.main-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #8892B0;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #A8B2D1;
+}
+
+.main-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #3C998F;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #3C998F;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.main-content a:hover {
+    background: #3C998F;
+    color: #0A192F;
+}
+
+/* Navbar Desktop */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+nav a {
+    padding: 5px;
+    text-decoration: none;
+    color: #8892B0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #D4DEFE;
+}
+
+/* Navbar for Mobile */
+.navbar-mobile .offcanvas {
+    background-color: #0A192F !important; /* Importante para forzar el color */
+}
+
+.navbar-mobile {
+    background-color: #0A192F !important; /* Forzar color en el navbar */
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid #8892B0; /* Separador */
+}
+
+.offcanvas-title {
+    color: #D4DEFE;
+}
+
+.offcanvas-body a {
+    text-decoration: none;
+    color: #8892B0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.offcanvas-body a:hover {
+    color: #D4DEFE;
+}
+
+.btn-close {
+    background-color: #8892B0; /* Color del botón cerrar */
+    border: none;
+}
+
+.navbar-toggler {
+    background-color: transparent; /* Fondo transparente para integrar con el fondo oscuro */
+    border: 2px solid #3C998F; /* Un borde verde suave */
+    border-radius: 5px; /* Borde redondeado */
+    padding: 5px 10px; /* Espaciado interno */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(60, 153, 143)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-size: contain; /* Ajusta el tamaño del ícono */
+}
+
+.navbar-toggler:hover {
+    background-color: #3C998F; /* Fondo verde suave al pasar el mouse */
+    border-color: #D4DEFE; /* Cambia el color del borde al pasar el mouse */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Elimina el borde predeterminado */
+    box-shadow: 0 0 5px #3C998F; /* Añade un efecto de enfoque */
+}
+
+
+/* Personalización para dispositivos móviles */
+@media (min-width: 768px) {
+
+    .navbar-desktop {
+        display: flex !important; /* Mostramos el menú tradicional en pantallas grandes */
+    }
+
+    .navbar-mobile {
+        display: none !important; /* Ocultamos el menú móvil */
+    }
+
+    .container-fluid{
+        background-color: #0A192F;
+    }
+    
+}
+@media (max-width: 768px) {
+    #curriculumEscritorio {
+        display: none;
+    }
+}

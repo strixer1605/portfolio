@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #3C998F, #0A192F, #3C998F, #0A192F);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    color: #D4DEFE;
+    overflow: hidden; /* Evitamos scroll innecesario */
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#wrapper {
+    display: flex; /* Centra el contenido con Flexbox */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    min-height: 100vh; /* Garantiza que ocupa toda la ventana */
+    box-sizing: border-box;
+}
+
+.login-container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    color: #0A192F; /* Oscuro */
+    padding: 20px 30px;
+}
+
+.form-box h1 {
+    margin-bottom: 20px;
+}
+
+/* styles.css */
+.form-box input {
+    width: 100%;
+    padding: 10px 12px; /* Añadimos un padding lateral adecuado */
+    margin: 10px 0;
+    border: 1px solid #3C998F; /* Claro */
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+}
+.form-box input:focus {
+    outline: none;
+    border-color: #0A192F; /* Oscuro */
+}
+
+button {
+    width: 100%; /* Igualamos el ancho al de los inputs */
+    padding: 10px;
+    background-color: #0A192F; /* Oscuro */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3C998F; /* Claro */
+    color: #0A192F; /* Oscuro */
+}
+
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #0A192F; /* Oscuro */
+    text-decoration: none;
+    font-weight: bold;
+}
