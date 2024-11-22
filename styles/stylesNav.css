@@ -1,0 +1,147 @@
+/* Navbar Desktop */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+nav a {
+    padding: 5px;
+    text-decoration: none;
+    color: #8892B0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #D4DEFE;
+}
+
+/* Navbar for Mobile */
+.navbar-mobile .offcanvas {
+    background-color: #0A192F !important; /* Importante para forzar el color */
+}
+
+.navbar-mobile {
+    background-color: #0A192F !important; /* Forzar color en el navbar */
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid #8892B0; /* Separador */
+}
+
+.offcanvas-title {
+    color: #D4DEFE;
+}
+
+.offcanvas-body a {
+    text-decoration: none;
+    color: #8892B0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.offcanvas-body a:hover {
+    color: #D4DEFE;
+}
+
+.btn-close {
+    background-color: #8892B0; /* Color del botón cerrar */
+    border: none;
+}
+
+.navbar-toggler {
+    background-color: transparent; /* Fondo transparente para integrar con el fondo oscuro */
+    border: 2px solid #3C998F; /* Un borde verde suave */
+    border-radius: 5px; /* Borde redondeado */
+    padding: 5px 10px; /* Espaciado interno */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(60, 153, 143)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-size: contain; /* Ajusta el tamaño del ícono */
+}
+
+.navbar-toggler:hover {
+    background-color: #3C998F; /* Fondo verde suave al pasar el mouse */
+    border-color: #D4DEFE; /* Cambia el color del borde al pasar el mouse */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Elimina el borde predeterminado */
+    box-shadow: 0 0 5px #3C998F; /* Añade un efecto de enfoque */
+}
+
+
+/* Personalización para dispositivos móviles */
+@media (min-width: 768px) {
+
+    .navbar-desktop {
+        display: flex !important; /* Mostramos el menú tradicional en pantallas grandes */
+    }
+
+    .navbar-mobile {
+        display: none !important; /* Ocultamos el menú móvil */
+    }
+
+    .container-fluid{
+        background-color: #0A192F;
+    }
+    
+}
+@media (max-width: 768px) {
+    #escritorio {
+        display: none;
+    }
+}
+
+/* Estilo para los iconos de redes sociales */
+.social-container {
+    position: fixed; /* Fija los iconos en la pantalla */
+    left: 10px; /* Espacio desde el borde izquierdo */
+    bottom: 10px; /* Espacio desde el borde inferior */
+    display: flex;
+    flex-direction: column; /* Apilar los iconos verticalmente */
+    gap: 15px; /* Espacio entre los iconos */
+}
+
+.social-item {
+    background-color: #0A192F; /* Fondo oscuro */
+    color: white; /* Color de los iconos */
+    padding: 20px; /* Aumenta el padding para agrandar los iconos */
+    border-radius: 50%; /* Hace los iconos completamente redondos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra de los iconos */
+    transition: background-color 0.3s, transform 0.3s; /* Efectos al pasar el cursor */
+    font-size: 2.5rem; /* Aumenta el tamaño de los iconos */
+    display: flex;
+    justify-content: center; /* Centra el icono dentro del contenedor */
+    align-items: center; /* Centra el icono dentro del contenedor */
+    width: 60px; /* Define el ancho del contenedor */
+    height: 60px; /* Define el alto del contenedor para que sea un círculo perfecto */
+    text-decoration: none;
+    vertical-align: middle; /* Asegura que el icono se alinee correctamente */
+}
+
+.social-item:hover {
+    background-color: #3C998F; /* Color de fondo al pasar el cursor */
+    transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+}
+
+/* Estilo responsivo para vista móvil */
+@media (max-width: 768px) {
+    .social-container {
+        left: 20px; /* Más espacio desde el borde izquierdo en móvil */
+        bottom: 20px; /* Más espacio desde el borde inferior en móvil */
+    }
+}
+

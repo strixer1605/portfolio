@@ -9,18 +9,34 @@
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/stylesInicio.css">
+    <link rel="stylesheet" href="../styles/stylesNav.css">
 </head>
 <body>
     <div class="container">
-        <!-- Menú para escritorio -->
-        <nav>
-            <a href="#about">Sobre mi</a>
-            <a href="#experience">Experiencia</a>
-            <a href="#work">Trabajos</a>
-            <a href="#contact">Contacto</a>
-            <a href="#resume" style="border: 1px solid #3C998F; padding: 5px 10px; border-radius: 5px; color: #3C998F;" id="curriculumEscritorio">Curriculum</a>
-        </nav>
-
+    <!-- Menú para escritorio -->
+    <a href="inicio.php">
+        <img style="margin-top: 8px; height: 70px; cursor: pointer;" src="../imagenes/ley.png" alt="Inicio">
+    </a>
+    <!-- Navegación -->
+    <nav  id="escritorio">
+        <a href="sobreMi.php">Sobre mí</a>
+        <a href="trabajos.php">Trabajos</a>
+        <a href="#resume" style="border: 1px solid #3C998F; padding: 5px 10px; border-radius: 5px; color: #3C998F;" id="curriculumEscritorio">Currículum</a>
+    </nav>
+    <div class="social-container">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="social-item">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <!-- Email -->
+        <a href="mailto:tuemail@gmail.com" class="social-item">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/1234567890" target="_blank" class="social-item">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
         <!-- Menú para móviles -->
         <nav class="navbar bg-body-tertiary fixed-top navbar-mobile">
             <div class="container-fluid" style="justify-content: flex-end;">
@@ -34,10 +50,8 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
-                            <li><a href="#about">Sobre mi</a></li>
-                            <li><a href="#experience">Experiencia</a></li>
-                            <li><a href="#work">Trabajos</a></li>
-                            <li><a href="#contact">Contacto</a></li>
+                            <li><a href="sobreMi.php">Sobre mi</a></li>
+                            <li><a href="trabajos.php">Trabajos</a></li>
                             <li><a href="#resume" style="border: 1px solid #3C998F; padding: 5px 10px; border-radius: 5px;">Curriculum</a></li>
                         </ul>
                     </div>
