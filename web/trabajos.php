@@ -1,3 +1,6 @@
+<?php
+    include('../php/verificarSesion.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
