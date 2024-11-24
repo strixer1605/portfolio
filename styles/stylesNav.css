@@ -54,6 +54,21 @@ nav a:hover {
     color: #D4DEFE;
 }
 
+.offcanvas-body .social-item {
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Color inicial del ícono */
+    font-size: 1.5rem; /* Tamaño del ícono */
+    margin: 10px 0; /* Espaciado entre íconos */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.offcanvas-body .social-item:hover {
+    color: #3C998F; /* Cambia el color al pasar el mouse */
+}
+
+
 .btn-close {
     background-color: #8892B0; /* Color del botón cerrar */
     border: none;
@@ -100,7 +115,7 @@ nav a:hover {
     
 }
 @media (max-width: 768px) {
-    #escritorio {
+    #escritorio, #inicio {
         display: none;
     }
 }
@@ -108,7 +123,7 @@ nav a:hover {
 /* Estilo para los iconos de redes sociales */
 .social-container {
     position: fixed; /* Fija los iconos en la pantalla */
-    left: 10px; /* Espacio desde el borde izquierdo */
+    right: 12px; /* Espacio desde el borde derecho */
     bottom: 10px; /* Espacio desde el borde inferior */
     display: flex;
     flex-direction: column; /* Apilar los iconos verticalmente */
@@ -120,9 +135,9 @@ nav a:hover {
     color: white; /* Color de los iconos */
     padding: 20px; /* Aumenta el padding para agrandar los iconos */
     border-radius: 50%; /* Hace los iconos completamente redondos */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra de los iconos */
+    box-shadow: 0 3px 10px rgba(60, 153, 143, 0.5); /* Sombra de los iconos */
     transition: background-color 0.3s, transform 0.3s; /* Efectos al pasar el cursor */
-    font-size: 2.5rem; /* Aumenta el tamaño de los iconos */
+    font-size: 1.5rem; /* Aumenta el tamaño de los iconos */
     display: flex;
     justify-content: center; /* Centra el icono dentro del contenedor */
     align-items: center; /* Centra el icono dentro del contenedor */
@@ -139,9 +154,12 @@ nav a:hover {
 
 /* Estilo responsivo para vista móvil */
 @media (max-width: 768px) {
-    .social-container {
-        left: 20px; /* Más espacio desde el borde izquierdo en móvil */
-        bottom: 20px; /* Más espacio desde el borde inferior en móvil */
+    #iconosEscritorio{
+        display: none;
+    }
+
+    .social-container{
+        flex-direction: row;
     }
 }
 

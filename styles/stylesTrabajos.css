@@ -1,11 +1,44 @@
 /* Estilos globales */
-body {
+
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: Arial, sans-serif;
     background-color: #0A192F; /* Fondo oscuro */
     color: #D4DEFE; /* Texto claro */
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
 }
+
+/* El contenedor principal ocupa todo el espacio restante */
+.container {
+    flex: 1; /* Permite que el contenedor principal crezca y ocupe el espacio */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer fijo al final */
+footer {
+    background-color: #0A192F;
+    color: #D4DEFE;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Empuja el footer al final del contenedor */
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #3C998F;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #D4DEFE;
+    text-decoration: underline;
+}
+
 
 header {
     text-align: center;

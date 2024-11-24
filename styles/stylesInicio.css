@@ -102,6 +102,10 @@ body {
     .image-content {
         margin-top: 20px; /* Espaciado entre texto e imagen */
     }
+    
+    #wrapper {
+        margin-top: 65px;
+    }
 }
 
 
