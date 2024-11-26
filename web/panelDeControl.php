@@ -9,7 +9,7 @@
     <title>Modificar Currículum</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles//stylesNav.css">
-    <link rel="stylesheet" href="../styles//panelDeContro.css">
+    <link rel="stylesheet" href="../styles//panelDeControl.css">
 </head>
 <body>
     <div class="container">
@@ -34,69 +34,126 @@
         <main class="content">
             <section id="experiencias">
                 <h2>Experiencias Laborales</h2>
-                <form>
-                    <label for="experiencia">Agregar experiencia:</label>
-                    <textarea id="experiencia" name="experiencia" rows="4"></textarea>
-                    <button type="submit">Guardar</button>
-                </form>
-            </section>
+                <div class="form">
+                    <!-- Formulario para agregar una nueva experiencia -->
+                        <label for="empresa">Nombre de la empresa:</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Ingrese el nombre de la empresa" required>
     
+                        <label for="periodo">Periodo trabajado:</label>
+                        <input type="text" id="periodo" name="periodo" placeholder="Especifique el periodo que trabajó" required>
+    
+                        <label for="rol">Rol:</label>
+                        <input type="text" id="rol" name="rol" placeholder="¿Cuál fue su rol?" required>
+    
+                        <button type="submit" id="agregarExperiencia">Guardar</button>
+    
+                    <!-- Botón para desplegar/ocultar las experiencias laborales -->
+                    <button id="toggleExperiencias" class="nav-button" style="margin-left: 0; margin-right: 0;">Mostrar Experiencias</button>
+                </div>
+
+                <!-- Contenedor de las experiencias -->
+                <div id="listaExperiencias" class="experiencias-contenedor" style="display: none;">
+                    <?php
+                        include '../php/traeExperiencia.php';
+                    ?>
+                </div>
+            </section>
+
             <section id="estudios">
                 <h2>Estudios</h2>
-                <form>
-                    <label for="estudio">Agregar estudio:</label>
-                    <textarea id="estudio" name="estudio" rows="4"></textarea>
-                    <button type="submit">Guardar</button>
-                </form>
+                <div class="form">
+                    <!-- Formulario para agregar un nuevo estudio -->
+                    <label for="institucion">Institución:</label>
+                    <input type="text" id="institucion" name="institucion" placeholder="Ingrese el nombre de la institución" required>
+
+                    <label for="periodoEstudio">Periodo de estudio:</label>
+                    <input type="text" id="periodoEstudio" name="periodoEstudio" placeholder="Especifique el periodo de estudio" required>
+
+                    <label for="titulo">Título obtenido:</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="¿Qué título obtuvo?" required>
+
+                    <button type="submit" id="agregarEstudio">Guardar</button>
+
+                    <!-- Botón para desplegar/ocultar los estudios -->
+                    <button id="toggleEstudios" class="nav-button" style="margin-left: 0; margin-right: 0;">Mostrar Estudios</button>
+                </div>
+
+                <!-- Contenedor de los estudios -->
+                <div id="listaEstudios" class="estudios-contenedor" style="display: none;">
+                    <?php
+                        include '../php/traerEstudios.php';
+                    ?>
+                </div>
             </section>
+
     
             <section id="idiomas">
                 <h2>Idiomas</h2>
-                <form>
+                <div class="form">
                     <label for="idioma">Agregar idioma:</label>
                     <input type="text" id="idioma" name="idioma">
-                    <button type="submit">Guardar</button>
-                </form>
+                    <button type="submit" id="guardarIdioma">Guardar</button>
+
+                    <!-- Botón para desplegar/ocultar la lista de idiomas -->
+                    <button type="button" id="toggleIdiomas" class="nav-button" style="margin-left: 0; margin-right: 0;">Mostrar Idiomas</button>
+                </div>
+
+                <!-- Contenedor de los idiomas -->
+                <div id="listaIdiomas" class="idiomas-contenedor" style="display: none;justify-content: center;flex-direction: column;align-items: center;">
+                    <?php
+                        include '../php/traerIdiomas.php';
+                    ?>
+                </div>
             </section>
     
             <section id="herramientas">
                 <h2>Herramientas de Software</h2>
-                <form>
+                <div class="form">
                     <label for="herramienta">Agregar herramienta:</label>
                     <input type="text" id="herramienta" name="herramienta">
-                    <button type="submit">Guardar</button>
-                </form>
+                    <button type="submit" id="guardarHerramienta">Guardar</button>
+
+                    <!-- Botón para desplegar/ocultar la lista de herramientas -->
+                    <button type="button" id="toggleHerramientas" class="nav-button" style="margin-left: 0; margin-right: 0;">Mostrar Herramientas</button>
+                </div>
+
+                <!-- Contenedor de las herramientas -->
+                <div id="listaHerramientas" class="herramientas-contenedor" style="display: none; justify-content: center; flex-direction: column; align-items: center;">
+                    <?php
+                        include '../php/traerHerramientas.php';
+                    ?>
+                </div>
             </section>
     
             <section id="contacto">
                 <h2>Contacto</h2>
-                <form>
-                    <label for="telefono">Teléfono:</label>
-                    <input type="text" id="telefono" name="telefono">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                    <button type="submit">Guardar</button>
-                </form>
+                <div class="form">
+                    <?php
+                        include '../php/traerContacto.php';
+                    ?>
+
+                    <button type="button" id="btnContacto">Guardar</button>
+                </div>
             </section>
+
     
             <section id="sobre-mi">
                 <h2>Sobre Mí</h2>
-                <form>
+                <div class="form">
                     <label for="descripcion">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4"></textarea>
-                    <button type="submit">Guardar</button>
-                </form>
+                    <?php
+                        include '../php/traerSobreMi.php';
+                    ?>
+                    <button type="button" id="sobreMi">Guardar</button>
+                </div>
             </section>
         </main>
     </div>
 
-    <script>
-        // Función para navegar entre secciones
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../scripts//panelControl.js"></script>
 </body>
 </html>
